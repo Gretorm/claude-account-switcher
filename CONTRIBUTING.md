@@ -30,6 +30,17 @@ CI runs the same commands and must be green.
 - **No new permission, network destination or remote code** without discussing it first in an issue. Data stays in `storage.local`.
 - Record significant design choices in [docs/DECISIONS.md](docs/DECISIONS.md).
 
+## Upgrading Node.js
+
+The project runs on the current Node.js LTS (`.nvmrc`). Node.js only builds and tests the extension; it is not part of what ships to browsers. Dependabot ignores major `@types/node` updates, because the typings must describe the Node version actually used, not the latest one.
+
+When a new even-numbered Node.js release becomes LTS, upgrade everything in one commit:
+
+1. `.nvmrc`: the new major version.
+2. `package.json`: `engines.node`, and `@types/node` to the same major (`pnpm add -D @types/node@<major>`).
+3. `.github/dependabot.yml`: keep the `@types/node` ignore rule (it applies to the next major).
+4. Run `pnpm check` and `pnpm build:all` on the new version.
+
 ## Fixing a broken menu integration
 
 1. Open claude.ai with the extension loaded and turn on **Debug logging** in the popup settings.

@@ -15,6 +15,18 @@ Each store step **skips with a notice** when its secrets are missing, so you can
 
 Add secrets under **Settings → Secrets and variables → Actions → New repository secret**.
 
+### Protecting `main`
+
+Branch rules are not available for private repositories on GitHub's free plan. Once the repository is public (or on a paid plan), apply the ruleset kept in [`.github/rulesets/protect-main.json`](../.github/rulesets/protect-main.json). It blocks force pushes and deletion of the default branch:
+
+```bash
+gh api -X POST repos/Gretorm/claude-account-switcher/rulesets --input .github/rulesets/protect-main.json
+```
+
+You can also import the file under **Settings → Rules → Rulesets → New ruleset → Import a ruleset**.
+
+It does not require status checks: pull requests opened by release-please with the default `GITHUB_TOKEN` get no CI run, so a required check would block every release PR. Add the CI check to the ruleset once `RELEASE_PLEASE_TOKEN` is configured.
+
 The very first version must be uploaded to each store **by hand** (Chrome and Edge need an existing item to get its ID; AMO accepts API uploads for new add-ons, but a manual first listing lets you fill in the store page). Upload the zips from the first GitHub Release, then add the secrets for automatic updates.
 
 ## Chrome Web Store

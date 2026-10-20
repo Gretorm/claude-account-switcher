@@ -13,7 +13,8 @@ updates:
         dependency-type: development
         update-types: [minor, patch]
     ignore:
-      # Node typings follow the Node version in .nvmrc, not the latest release.
+      # Node typings follow the Node version in .nvmrc (the current LTS), not the
+      # latest release. Upgrade them together: see "Upgrading Node.js" in CONTRIBUTING.md.
       - dependency-name: '@types/node'
         update-types: [version-update:semver-major]
 
