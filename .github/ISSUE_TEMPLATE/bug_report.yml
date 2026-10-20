@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Never paste cookies, session values, or screenshots that show them.**
+        For security issues, follow SECURITY.md instead of opening a public issue.
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options: [Chrome, Edge, Firefox, Safari (experimental), Other Chromium browser]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Browser and extension versions
+      placeholder: Chrome 141, extension 0.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where does it happen?
+      options: [claude.ai account menu, Toolbar popup, Both]
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: claude.ai interface language
+      placeholder: English
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Save two accounts
+        2. Open the claude.ai account menu
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Debug logs
+      description: Turn on "Debug logging" in the popup settings and paste relevant console lines. Remove any personal data first.
+      render: text
