@@ -1,0 +1,60 @@
+{
+  "name": "claude-account-switcher",
+  "displayName": "Menu Account Switcher for Claude",
+  "version": "0.1.0",
+  "description": "Claude account switcher built into the claude.ai menu. Switch accounts in one click. Open source, Chrome, Edge & Firefox.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/Gretorm/claude-account-switcher#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gretorm/claude-account-switcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gretorm/claude-account-switcher/issues"
+  },
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "dev:edge": "wxt -b edge",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "build:edge": "wxt build -b edge",
+    "build:safari": "wxt build -b safari",
+    "build:all": "wxt build && wxt build -b firefox && wxt build -b edge && wxt build -b safari",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "zip:edge": "wxt zip -b edge",
+    "zip:safari": "wxt zip -b safari",
+    "zip:all": "wxt zip && wxt zip -b firefox && wxt zip -b edge && wxt zip -b safari",
+    "postinstall": "wxt prepare",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icons": "node scripts/generate-icons.mjs",
+    "check": "eslint . --max-warnings 0 && prettier --check . && tsc --noEmit && vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "^24.19.2",
+    "@webext-core/fake-browser": "2.0.1",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.13.0",
+    "happy-dom": "21.0.3",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vitest": "5.0.5",
+    "wxt": "0.21.4"
+  }
+}
