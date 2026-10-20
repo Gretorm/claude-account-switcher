@@ -1,0 +1,53 @@
+<!--
+  Simplified account menu, modeled on the structure observed on claude.ai
+  (roles, tags, slot layout and data-highlighted styling). Fake data only.
+-->
+<div role="menu" tabindex="-1" class="menu-popup">
+  <div class="menu-scroll">
+    <div role="presentation">
+      <span data-testid="user-menu-header">jane.doe@example.com</span>
+    </div>
+    <div
+      role="menuitem"
+      tabindex="-1"
+      data-testid="user-menu-settings"
+      class="item text-primary data-[highlighted]:bg-hover"
+    >
+      <span class="icon-slot"><span>⚙</span></span>
+      <span class="text-slot">Settings</span>
+    </div>
+    <div
+      role="menuitem"
+      tabindex="-1"
+      data-testid="user-menu-language"
+      class="item text-primary data-[highlighted]:bg-hover"
+    >
+      <span class="icon-slot"><span>🌐</span></span>
+      <span class="text-slot">Language</span>
+    </div>
+    <div role="separator" data-orientation="horizontal" class="separator"></div>
+    <a
+      role="menuitem"
+      tabindex="-1"
+      href="https://example.com/keys"
+      data-testid="user-menu-console"
+      data-cds-icon-row=""
+      class="item text-primary data-[highlighted]:bg-hover"
+    >
+      <span class="icon-slot"><span>🔑</span></span>
+      <span class="text-slot">Get API keys</span>
+    </a>
+    <div role="separator" data-orientation="horizontal" class="separator"></div>
+    <a
+      role="menuitem"
+      id="logout-item"
+      tabindex="-1"
+      href="/logout"
+      data-cds-icon-row=""
+      class="item text-primary data-[highlighted]:bg-hover"
+    >
+      <span class="icon-slot"><span>⎋</span></span>
+      <span class="text-slot">Log out</span>
+    </a>
+  </div>
+</div>
