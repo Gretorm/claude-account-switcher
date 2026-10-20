@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Menu Account Switcher: two stacked account cards with a swap arrow. Original artwork, MIT licensed. -->
+  <rect width="128" height="128" rx="28" fill="#1f4e5f"/>
+  <rect x="22" y="24" width="60" height="44" rx="10" fill="#7cc6dc"/>
+  <circle cx="40" cy="42" r="8" fill="#1f4e5f"/>
+  <rect x="54" y="36" width="20" height="5" rx="2.5" fill="#1f4e5f"/>
+  <rect x="54" y="46" width="14" height="5" rx="2.5" fill="#1f4e5f" opacity="0.6"/>
+  <rect x="46" y="60" width="60" height="44" rx="10" fill="#ffffff"/>
+  <circle cx="64" cy="78" r="8" fill="#1f4e5f"/>
+  <rect x="78" y="72" width="20" height="5" rx="2.5" fill="#1f4e5f"/>
+  <rect x="78" y="82" width="14" height="5" rx="2.5" fill="#1f4e5f" opacity="0.6"/>
+  <path d="M26 82 v8 a12 12 0 0 0 12 12 h2" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M36 94 l8 8 -8 8" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
